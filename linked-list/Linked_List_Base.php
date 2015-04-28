@@ -1,6 +1,6 @@
 <?php
 
-abstract class Linked_List_Base
+abstract class Linked_List_Base implements Linked_List_Interface
 {
     private $first;
 
@@ -10,17 +10,7 @@ abstract class Linked_List_Base
 
     function __construct()
     {
-        require_once('../node/Node.php');
         $first = null;
-
-    }
-
-    public function newNode($value)
-    {
-        $node = new Node();
-        $node->value = $value;
-
-        return $node;
     }
 
     public function isEmpty ()
@@ -46,5 +36,14 @@ abstract class Linked_List_Base
         }
     }
 
+    public function setFirst($node)
+    {
+        $this->first = $node;
+    }
+
+    public function getFirst()
+    {
+        return $this->first;
+    }
 
 }

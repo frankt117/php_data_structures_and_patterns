@@ -1,6 +1,6 @@
 <?php
 
-class Super_Node extends Node
+class Super_Node extends Node_Base
 {
 
     private $super;

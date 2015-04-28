@@ -1,9 +1,4 @@
 <?php
-class Node
-{
-    public $value = null;
-    public $nextNode = null;
-}
 
 class LinkedListStack
 {
