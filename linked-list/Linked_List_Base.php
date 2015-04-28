@@ -25,13 +25,13 @@ abstract class Linked_List_Base implements Linked_List_Interface
     public function printAll()
     {
         $current = $this->first;
-        echo $current->value;
+        echo $current->getValue();
         echo "<br>";
 
-        while($current->nextNode)
+        while($current->getNextNode())
         {
-            $current = $current->nextNode;
-            echo $current->value;
+            $current = $current->getNextNode();
+            echo $current->getValue();
             echo "<br>";
         }
     }
